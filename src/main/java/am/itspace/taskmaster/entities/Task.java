@@ -29,7 +29,7 @@ public class Task {
             joinColumns = @JoinColumn(name = "task_id"),
             inverseJoinColumns = @JoinColumn(name = "users_id"))
     private List<User> users;
-    @OneToOne(cascade = CascadeType.MERGE)
+    @ManyToOne(cascade = CascadeType.MERGE)
     private Project project;
     @Column(name = "log_time")
     private Double logTime;
